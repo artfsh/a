@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title></title>
+		<script src="./js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/new_file.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="./css/new_file.css"/>
+	</head>
+	<body>
+		<div class="tab" id="tab1" onclick="tab1Selected()">已知美术分</div>
+		<div class="tab" id="tab2" onclick="tab2Selected()">已知文化分</div>
+		<div class="input-back"></div>
+		<input id="score" placeholder="输入美术分，查询文化最低要求">
+		<div class="search-click" onclick="search()">
+			<img class="search-icon" src="./img/search.png">
+		</div>
+		<div class="table-back"></div>
+		<table class="td-name-table">
+			<td class="td-name">院校名称</td>
+			<td class="td-name" onclick="changeTime()">
+				<select id="timeDock" onchange="changeTime()">
+					<option value="2022" selected>2022</option>
+					<option value="2021">2021</option>
+					<option value="2020">2020</option>
+				</select>
+			</td>
+		</table>
+		<div id="main-table-container"></div>
+		<!-- 表格溢出界面，避免信息展示不全解决方案是多渲染几行，直到空行刚好填满一面。 -->
+	</body>
+</html>
